@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: grid;
+    height: 100vh;
+    place-items:center;
+    background: linear-gradient(to right,#dfabc5 30%,#1da1f2 120%);
+}
+
+.contanier{
+    background-color: antiquewhite;
+    max-width: 400px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 50px;
+    position: relative;
+}
+.contanier .logo img{
+    width: 80px;
+    height:70px;
+    position: absolute;
+    left:70%;
+    top: 20px;
+    border-radius: 30%;
+    border: 5px solid powderblue ;
+}
+.contanier form .title{
+    font-size: 25px;
+    font-weight: 300;
+    margin: 20px 0 15px 0;
+    position:relative;
+}
+
+.contanier form .title::before{
+    content:'';
+    position: absolute;
+    height: 3px;
+    width: 60px;
+    bottom: 2px;
+    left: 0;
+    border-radius: 1px;
+    background: black;
+}
+
+.contanier form .input-box{
+    width: 100%;
+    height: 45px;
+    margin-top: 20px;
+    position: relative;  
+}
+
+.contanier form .input-box input{
+    height:80%;
+    width: 80%;
+    outline: none;
+    font-size: 15px;
+    border: none;
+}
+
+.contanier form .underline::before{
+    position: absolute;
+    content:'';
+    height: 2px;
+    background: bisque;
+    width: 80%;
+    left: 0;
+    right: 0;
+}
+.contanier form .underline::after{
+    position:absolute;
+    content:'';
+    height:2px;
+    width:271px;
+    left:0;
+    bottom:0;
+    background:gray;
+    transform:scaleX(0);
+    transform-origin:left;
+    transition: all 0.4s ease;
+}
+.contanier form .input-box input:focus ~ .underline::after,
+.contanier form .input-box input:valid ~ .underline::after{
+   transform: scaleX(1);
+   transform-origin: left;
+}
+
+.contanier form .button{
+    margin:40px 0 20px 0;
+
+}
+ .contanier form .input-box input[type="submit"]{
+    font-size:15px;
+    color: antiquewhite;
+    border-radius: 5px;
+    cursor: pointer;
+    background: green;
+ }
+.contanier form .input-box input[type="submit"]:hover{
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 15);
+    color: red;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.contanier .text{
+    font-size: 15px;
+    text-align: center;
+}
+ 
+.contanier .github a,
+.contanier .twitter a,
+.contanier .facebook a{
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    text-decoration: none;
+    padding-left: 15px;
+    color: white;
+    line-height: 45px;
+    border-radius: 5px;
+
+}
+
+.contanier .github a{
+    background-color: #24292e;
+    margin:20px 0 15px;
+
+}
+.contanier .github a:hover{
+    background-color: #3a5774;
+
+}
+.contanier .twitter a{
+    background: #1ad1f2;
+    margin: 20px 0 15px 0;
+}
+.contanier .twitter a:hover{
+    background: #b5cdd1;
+
+}
+.contanier .facebook a{
+    background: #4267b2;
+    margin: 20px 0 15px;
+
+}
+.contanier .facebook a:hover{
+    background: #dfabc5;
+
+}
+ 
+
+.contanier .github  i,
+.contanier .facebook  i,
+.contanier .twitter i{
+    font-size: 20px;
+    padding-right: 20px;
+
+}
